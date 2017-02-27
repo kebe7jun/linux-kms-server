@@ -6,6 +6,4 @@ COPY . /
 
 WORKDIR /vlmcsd
 
-RUN make
-
-CMD ["vlmcsd", "-D"]
+CMD ["./vlmcsd", "-D"]

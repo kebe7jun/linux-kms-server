@@ -5,7 +5,7 @@ Linux kms server.
 
 - With Docker:
 ```
-$ docker run -it -d kebe/vlmcsd
+$ docker run -it -d -p 1688:1688 kebe/vlmcsd
 ```
 
 - With linux:

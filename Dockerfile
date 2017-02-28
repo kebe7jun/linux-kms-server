@@ -6,4 +6,6 @@ COPY . /
 
 WORKDIR /vlmcsd
 
+EXPOSE 1688
+
 CMD ["./vlmcsd", "-D"]

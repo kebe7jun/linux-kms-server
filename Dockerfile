@@ -11,6 +11,7 @@ ADD . /app
 RUN set -ex && \
     apk add --no-cache --virtual .build-deps \
                                 build-base && \
+    cd vlmcsd && \
     make && \
     apk del .build-deps && \
     rm -rf /tmp/*

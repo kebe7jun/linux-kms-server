@@ -14,9 +14,9 @@ RUN set -ex && \
     cd vlmcsd && \
     make && \
     mv vlmcsd /usr/bin && \
-    apk del .build-deps && \
+    apk del .build-deps build-base && \
     rm -rf /tmp/* && \
-    rm -rf /app
+    rm -rf /app/*
 
 EXPOSE 1688
 

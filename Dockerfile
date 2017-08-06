@@ -1,10 +1,19 @@
-FROM ubuntu:16.04
+FROM alpine
 
 MAINTAINER Kebe liu <mail@kebe7jun.com>
 
-COPY . /
+RUN mkdir /app
 
-WORKDIR /vlmcsd
+WORKDIR /app
+
+ADD . /app
+
+RUN set -ex && \
+    apk add --no-cache --virtual .build-deps \
+                                build-base && \
+    make && \
+    apk del .build-deps && \
+    rm -rf /tmp/*
 
 EXPOSE 1688
 

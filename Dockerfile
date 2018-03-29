@@ -20,4 +20,4 @@ RUN set -ex && \
 
 EXPOSE 1688
 
-CMD ["/usr/bin/vlmcsd", "-D"]
+CMD ["/usr/bin/vlmcsd", "-f"]
